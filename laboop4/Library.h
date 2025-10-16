@@ -13,14 +13,14 @@ public:
     ~Library();
 
     Library& operator+(const Book& newBook);
-    Library& operator-(const string& titleToRemove);
+    Library& operator-(const std::string& titleToRemove);
 
-    void searchByAuthor(const string& a) const;
-    void searchByTitle(const string& t) const;
-    void searchByPublisher(const string& p) const;
-    void searchByYear(int y) const;
+    void search(const std::string& author) const;
+    void search(const std::string& title, bool byTitle) const;
+    void searchByPublisher(const std::string& publisher) const; 
+    void search(int year) const;
 
     void display() const;
 };
 
-#endif#pragma once
+#endif
